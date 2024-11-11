@@ -1,27 +1,16 @@
 package OOPSinJAVA;
 public class StudentClass {
     // creating a new data type
-    public static class student{
-        String name;
-        int rno;
-        double percent;
 
-        student(String name,int rno,double percent){
-            this.name=name;
-            this.rno=rno;
-            this.percent=percent;
-            System.out.println(this.rno+" "+"hello");
-        }
-    }
-    public static int change(student s){
+    public static int change(Student s){
         s.rno=50;
         return s.rno;
 
     }
     public static void main(String[] args) {
 
-           student s2 = new student("hah",12,22);
-           student s1 = new student("moksh",s2.rno,58);  // declaration
+           Student s2 = new Student("hah",12,22);
+           Student s1 = new Student("moksh",s2.rno,58);  // declaration
 //           s1.name = "Moksh";
 //           s1.rno = 76;
 //           s1.percent=92.5;
