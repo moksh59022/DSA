@@ -25,4 +25,3 @@ public class StringCompression {
         System.out.println(ans);
     }
 }
-

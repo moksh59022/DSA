@@ -1,4 +1,4 @@
-package Stack.ques;
+package StackPart2;
 
 import java.util.Scanner;
 import java.util.Stack;
