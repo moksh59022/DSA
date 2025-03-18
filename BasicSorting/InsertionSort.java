@@ -20,32 +20,32 @@ public class InsertionSort {
             System.out.println();
 
             // insertion sort
-//            for (int i = 1; i < n; i++) {  // n-1 passes
-//
-//                for (int j = i; j >=1; j--) {
-//
-//                    if (arr[j] < arr[j-1]) {
-//                        swap(arr,j,j-1);
-//
-//                    }
-//                    else break;
-//                }
-//
-//
-//
-//            }
-//            print(arr);
+            for (int i = 1; i < n; i++) {  // n-1 passes
+
+                for (int j = i; j >=1; j--) {
+
+                    if (arr[j] < arr[j-1]) {
+                        swap(arr,j,j-1);
+
+                    }
+                    else break;
+                }
+
+
+
+            }
+            print(arr);
 
                // insertion sort
-
-            for(int i = 0; i < n; i++) {
-                int j = i;
-                while (j>=1 && arr[j]<=arr[j-1] ){
-                  swap(arr,j,j-1);
-                  j--;
-                }
-            }
-             print(arr);
+//
+//            for(int i = 0; i < n; i++) {
+//                int j = i;
+//                while (j>=1 && arr[j]<=arr[j-1] ){
+//                  swap(arr,j,j-1);
+//                  j--;
+//                }
+//            }
+//             print(arr);
 
 
     }

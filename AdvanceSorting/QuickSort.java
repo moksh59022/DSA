@@ -38,6 +38,7 @@ public static int partition(int[] arr,int lo,int hi){
 public static void quickSort(int[] arr ,int lo, int hi){
     // pivot (arr[lo]) ko sahi jgha rakho
     // & left part me <= pivot
+    if (lo>=hi) return;
     int idx = partition(arr,lo,hi);
     quickSort(arr,lo,idx-1);
     quickSort(arr,idx+1,hi);
@@ -48,5 +49,7 @@ public static void quickSort(int[] arr ,int lo, int hi){
     int n = arr.length;
     print(arr);
     quickSort(arr,0,n-1);
+        System.out.println();
+    print(arr);
     }
 }
