@@ -33,8 +33,8 @@ class phone {
 
     }
 
-    public static void backtrack(String digits,int idx,StringBuilder combo,List<String> ans,HashMap<Character,String> map){
-        if(idx == digits.length()){
+    public static void backtrack(String digits,int idx,StringBuilder combo,List<String> ans,HashMap<Character,String> map) {
+        if (idx == digits.length()) {
             ans.add(combo.toString());
             return;
         }
@@ -42,12 +42,10 @@ class phone {
 
         String letters = map.get(digits.charAt(idx));
 
-        for(char letter : letters.toCharArray()){
+        for (char letter : letters.toCharArray()) {
             combo.append(letter);
-            backtrack(digits,idx+1,combo,ans,map);
-            combo.deleteCharAt(combo.length()-1);
+            backtrack(digits, idx + 1, combo, ans, map);
+            combo.deleteCharAt(combo.length() - 1);
         }
-
     }
-
 }
