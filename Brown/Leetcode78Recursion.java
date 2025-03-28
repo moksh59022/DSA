@@ -41,6 +41,7 @@ public class Leetcode78Recursion {
         arr = new ArrayList<>();
         ArrayList<Integer> ans = new ArrayList<>();
         helper(0,nums,ans);
+
         arr.sort((a,b) -> {
             for (int i = 0; i < Math.min(a.size(), b.size()); i++) {
                 if(!a.get(i).equals(b.get(i))){
@@ -51,4 +52,5 @@ public class Leetcode78Recursion {
         });
         return arr;
     }
+    
 }
