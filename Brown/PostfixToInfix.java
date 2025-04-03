@@ -6,6 +6,7 @@ public class PostfixToInfix {
     public static void main(String[] args) {
         String str = "9 5 3 + 4 * 6 / -";
         System.out.println(postfixToInfix(str));
+
     }
     public static String postfixToInfix(String str) {
         Stack<String> val = new Stack<>();
@@ -35,4 +36,11 @@ public class PostfixToInfix {
         }
         return val.pop();
     }
-}
+
+//    postToIn
+
+
+
+
+
+    }

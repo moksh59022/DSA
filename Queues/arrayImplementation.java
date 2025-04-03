@@ -19,7 +19,8 @@ public class arrayImplementation {
             else{
 //                arr[r+1] = val;
 //                r++;
-                arr[++r] = val;
+                r++;
+                arr[r] = val;
             }
             size++;
         }

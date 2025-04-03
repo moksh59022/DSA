@@ -2,11 +2,12 @@ package Brown;
 
 
 
+import java.util.Scanner;
 import java.util.Stack;
 
 public class InfixToPrefix {
-    public static void main(String[] args) {
-        String infix = "10+5*2";
+        public static void main(String[] args) {
+        String infix = "(4+2)*(7-4)";
         System.out.println("Infix: " + infix);
 
         Stack<String> val = new Stack<>();
