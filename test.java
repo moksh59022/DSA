@@ -1,50 +1,30 @@
-import java.util.Scanner;
-
 public class test {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int r1 = sc.nextInt();
-        int c1 = sc.nextInt();
+       int[] arr = {2,3,6,3,8,3,2,6,2,4};
+        System.out.println(firstIdx(arr,0,3));
 
-        int r2 = sc.nextInt();
-        int c2 = sc.nextInt();
+        int[] ans = allIdx(arr,0,3,0);
+        for (int ele : ans) System.out.print(ele+" ");
+    }
+    public static int firstIdx(int[] arr,int idx,int data){
+        if(idx == arr.length) return -1;
+        int a = firstIdx(arr,idx+1,data);
+        if(arr[idx]==data) return idx;
+        else return a;
+    }
 
-        if(r1!=c2) return;
+    public static int[] allIdx(int[] arr,int idx,int t,int s){
 
-        int[][] arr1 = new int[r1][c1];
-        for(int i = 0;i<r1;i++){
-            for (int j = 0; j < c1; j++) {
-                arr1[i][j] = sc.nextInt();
-            }
+        if(idx==arr.length) return new int[s];
+
+        if(arr[idx]==t){
+
+          int[] carr = allIdx(arr,idx+1,t,s+1);
+          carr[s] = idx;
+          return carr;
+        }else {
+            int[] carr = allIdx(arr,idx+1,t,s);
+            return carr;
         }
-
-        int[][] arr2 = new int[r2][c2];
-        for(int i = 0;i<r2;i++){
-            for (int j = 0; j < c2; j++) {
-                arr2[i][j] = sc.nextInt();
-            }
-        }
-
-
-
-        int[][] arr3 = new int[r1][c2];
-
-        for (int i = 0; i < r1; i++) {
-            for (int j = 0; j < c2; j++) {
-                for (int k = 0; k < c1; k++) {
-                    arr3[i][j]+=arr1[i][k]*arr2[k][j];
-                }
-            }
-        }
-
-        int sum = 0;
-        for(int i = 0;i<r1;i++){
-            for (int j = 0; j < c2; j++) {
-                System.out.print(arr3[i][j]+" ");
-                sum+=arr3[i][j];
-            }
-            System.out.println();
-        }
-        System.out.println(sum);
     }
 }

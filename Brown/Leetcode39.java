@@ -44,6 +44,6 @@ public class Leetcode39 {
             findCombinations(ind,arr,target - arr[ind] , ans,ds);
             ds.remove(ds.size()-1);
         }
-        findCombinations(ind+1,arr,target,ans,ds);
+            findCombinations(ind+1,arr,target,ans,ds);
     }
 }

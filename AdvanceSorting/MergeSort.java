@@ -45,7 +45,7 @@ public class MergeSort {
         merge(a,b,arr);
 
         // delete a and b to improve space complexity
-        a=null;b=null;
+//        a=null;b=null;
 
    }
     public static void main(String[] args) {
