@@ -4,7 +4,7 @@ import java.util.*;
 
 public class GenericTree{
 
-    public class GenericTree2 implements Iterable<Integer> {
+    public static class GenericTree2 implements Iterable<Integer> {
         GenericTree.Node root;
 
         GenericTree2(GenericTree.Node root) {
@@ -513,7 +513,7 @@ public class GenericTree{
         System.out.println(post);
 
     }
-    public void main(String[] args) {
+    public static void main(String[] args) {
         int[] arr = {
                 10,
                 20, 50, -1, 60, -1, -1,
@@ -544,11 +544,11 @@ public class GenericTree{
         // Optional: Add a print to verify tree construction
         System.out.println("Tree constructed with root: " + root.data);
 //        display(root);
-        System.out.println(size(root));
-        System.out.println(max(root));
-        System.out.println(height(root));
+//        System.out.println(size(root));
+//        System.out.println(max(root));
+//        System.out.println(height(root));
 //        traversal(root);
-        levelOrder(root);
+//        levelOrder(root);
         levelOrderLineWise(root);
         System.out.println();
         levelOrderLineWise2(root);
@@ -562,22 +562,22 @@ public class GenericTree{
 //        System.out.println(a.data);
         System.out.println();
         System.out.println();
-        mirror(root);
-        display(root);
-        System.out.println();
-        System.out.println();
-        removeLeaf(root);
-        display(root);
-
-        GenericTree2 gt = new GenericTree2(root);
-        for (int val : gt){
-            System.out.println(val);
-        }
-
-
-        Iterator<Integer> gti = gt.iterator();
-        while (gti.hasNext()==true){
-            System.out.println(gti.next());
-        }
+//        mirror(root);
+//        display(root);
+//        System.out.println();
+//        System.out.println();
+//        removeLeaf(root);
+//        display(root);
+//
+//        GenericTree2 gt = new GenericTree2(root);
+//        for (int val : gt){
+//            System.out.println(val);
+//        }
+//
+//
+//        Iterator<Integer> gti = gt.iterator();
+//        while (gti.hasNext()==true){
+//            System.out.println(gti.next());
+//        }
     }
 }

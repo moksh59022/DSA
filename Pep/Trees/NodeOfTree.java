@@ -1,4 +1,4 @@
-package Trees;
+package Pep.Trees;
 
 class Node{
     int val;

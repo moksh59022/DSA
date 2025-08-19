@@ -1,30 +1,18 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 public class test {
-    public static void main(String[] args) {
-       int[] arr = {2,3,6,3,8,3,2,6,2,4};
-        System.out.println(firstIdx(arr,0,3));
-
-        int[] ans = allIdx(arr,0,3,0);
-        for (int ele : ans) System.out.print(ele+" ");
-    }
-    public static int firstIdx(int[] arr,int idx,int data){
-        if(idx == arr.length) return -1;
-        int a = firstIdx(arr,idx+1,data);
-        if(arr[idx]==data) return idx;
-        else return a;
-    }
-
-    public static int[] allIdx(int[] arr,int idx,int t,int s){
-
-        if(idx==arr.length) return new int[s];
-
-        if(arr[idx]==t){
-
-          int[] carr = allIdx(arr,idx+1,t,s+1);
-          carr[s] = idx;
-          return carr;
-        }else {
-            int[] carr = allIdx(arr,idx+1,t,s);
-            return carr;
+    public static void main(String[] args) throws Exception {
+        URL url = new URL("http://example.com/login");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Hacker)");
+        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String line;
+        while ((line = in.readLine()) != null) {
+            System.out.println(line); // Check if server is fooled
         }
+        in.close();
     }
 }

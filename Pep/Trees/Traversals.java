@@ -1,4 +1,4 @@
-package Trees;
+package Pep.Trees;
 
 import java.util.LinkedList;
 import java.util.Queue;
