@@ -19,7 +19,7 @@ public class PrintPermutations {
         }
     }
     public static void main(String[] args) {
-        int n = 4;
+        int n = 3;
         int[] arr = new int[n];
         permute(arr, 1, n);
     }
